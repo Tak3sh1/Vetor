@@ -8,21 +8,92 @@
     <link rel="stylesheet" href="components/loader.css">
     <link rel="stylesheet" href="css/style.css">
     <script>
+        var nomes = []
 
         function cadastrar() {
-        var nomes = []
-        var nomeinscriito 
+       
+        var nomeinscrito 
         nomeinserido = document.getElementById ('insertnome').value
 
         nomes.push(nomeinserido)
-        alert(nomes[0])
-        }
 
+        for ( var i = 0;  i < nomes.length; i++){
+        alert(nomes[i])
+        }
+    }
     </script>
 </head>
 <body>
-    <input type = "text" placeholder="Insira seu nome aqui" id="insertnome">
-    <input type ="button" value="CADASTRAR" onclick="cadastrar()">
+    <fieldset>
+    <input type = "text" placeholder="  Insira seu nome aqui" id="insertnome" class="input">
+    <br>
+    <br>
+
+    <input type ="button" value="Cadastrar" onclick="cadastrar()" class="button">
     <h1 id="exibirnome"></h1>
+
+
+   </fieldset>
+
+    <style>
+      *{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+background: #BE93D4;
+background: -webkit-linear-gradient(to right, #61045F, #BE93D4);  
+background: linear-gradient(to right, #61045F, #BE93D4);  
+}
+
+fieldset{
+display: flex;
+justify-content: center;
+aling-items: center;
+margin-top: 240px;
+margin-left: 45px;
+background-color: rgb(255,255,255);
+width: 309px;
+height:180px;
+border-radius: 10px;
+outline: none;
+ border:none;
+ box-shadow: 5px 4px 5px black;
+
+}
+
+.button{
+margin-top: 110px;
+margin-right: -250px;
+margin-left: -80px;
+background-color: rgb(204,169,221);
+border-radius: 10px;
+outline: none;
+border:none;
+width: 90px;
+height:45px;
+font-size: 17px;
+box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+}
+
+input{
+margin-top: 40px;
+margin-right: -50px;
+margin-left: -300px;
+border-radius: 10px;
+outline: none;
+border:none;
+font-size: 17px;
+background-color: rgb(204,169,221);
+ width: 170px;
+height:45px;
+box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+}
+
+
+    </style>
 </body>
 </html>
